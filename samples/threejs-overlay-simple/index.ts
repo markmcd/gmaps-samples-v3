@@ -85,7 +85,6 @@ function initMap(): void {
     map,
     scene,
     anchor: { ...mapOptions.center, altitude: 100 },
-    THREE,
   });
 }
 
