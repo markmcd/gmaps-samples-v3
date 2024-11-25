@@ -1,0 +1,86 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#map {
+  height: 100%;
+}
+#map.over {
+  opacity: 0.5;
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
+#sidebar {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.file {
+  display: flex;
+  flex-flow: column;
+  margin-top: 1em;
+  cursor: move;
+  text-align: center;
+}
+.file:hover .material-icons {
+  color: darkorange;
+}
+.file:hover .filename {
+  font-weight: bold;
+}
+.file .material-icons {
+  font-size: 50px;
+  color: orange;
+}
+.file .material-icons:hover {
+  color: darkorange;
+}
+.file .filename {
+  margin-top: 0.5em;
+  font-size: 20px;
+  color: #333333;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  height: 100%;
+  display: flex;
+}
+
+#sidebar {
+  flex-basis: 15rem;
+  flex-grow: 1;
+  padding: 1rem;
+  max-width: 30rem;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+#map {
+  flex-basis: 0;
+  flex-grow: 4;
+  height: 100%;
+}
+
