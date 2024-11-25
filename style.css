@@ -1,0 +1,80 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#map {
+  height: 100%;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#legend,
+#dataset,
+#counter {
+  background-color: #e5e5e5;
+  width: 15em;
+  margin-top: 2em;
+  margin-left: 1em;
+  border-radius: 8px;
+  font-family: Roboto;
+  overflow: hidden;
+}
+
+#dataset select {
+  border-radius: 0;
+  padding: 0.1em;
+  border: 1px solid black;
+  width: auto;
+  margin: 0.5em 1em;
+}
+
+.title {
+  padding: 0.5em 1em;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  background-color: rgb(66, 133, 244);
+  color: white;
+  width: 100%;
+}
+
+.button {
+  font-size: 1.2em;
+  margin: 1em;
+  background-color: rgb(66, 133, 244);
+  color: white;
+  padding: 0.5em;
+  border-radius: 8px;
+}
+
+#legend #container {
+  margin: 0.5em 1em;
+  display: flex;
+}
+
+#legend div .box {
+  display: flex;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 3px solid;
+}
+
+#legend div .legend {
+  display: flex;
+  padding: 0.5em;
+}
+
