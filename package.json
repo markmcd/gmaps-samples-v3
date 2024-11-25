@@ -1,0 +1,35 @@
+{
+  "name": "layer-heatmap",
+  "description": "Samples for Google Maps JavaScript",
+  "version": "2.1.4",
+  "keywords": [
+    "google",
+    "javascript",
+    "maps",
+    "samples"
+  ],
+  "homepage": "https://github.com/googlemaps/js-samples#readme",
+  "bugs": {
+    "url": "https://github.com/googlemaps/js-samples/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/googlemaps/js-samples.git"
+  },
+  "files": [],
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build --outDir dist --base './'",
+    "test": "tsc --no-emit",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.53.5",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.6"
+  },
+  "private": true,
+  "dependencies": {}
+}
