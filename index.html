@@ -1,0 +1,61 @@
+<!doctype html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Replacing Default Controls</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.ts"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <!-- Hide controls until they are moved into the map. -->
+    <div style="display: none">
+      <div class="controls zoom-control">
+        <button class="zoom-control-in" title="Zoom In">+</button>
+        <button class="zoom-control-out" title="Zoom Out">−</button>
+      </div>
+      <div class="controls maptype-control maptype-control-is-map">
+        <button class="maptype-control-map" title="Show road map">Map</button>
+        <button
+          class="maptype-control-satellite"
+          title="Show satellite imagery"
+        >
+          Satellite
+        </button>
+      </div>
+      <div class="controls fullscreen-control">
+        <button title="Toggle Fullscreen">
+          <div
+            class="fullscreen-control-icon fullscreen-control-top-left"
+          ></div>
+          <div
+            class="fullscreen-control-icon fullscreen-control-top-right"
+          ></div>
+          <div
+            class="fullscreen-control-icon fullscreen-control-bottom-left"
+          ></div>
+          <div
+            class="fullscreen-control-icon fullscreen-control-bottom-right"
+          ></div>
+        </button>
+      </div>
+    </div>
+
+    <!-- 
+      The `defer` attribute causes the script to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises. See
+      https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
