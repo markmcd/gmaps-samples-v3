@@ -1,0 +1,11 @@
+{
+    "infiniteLoopProtection": true,
+    "view": "browser",
+    "template": "node",
+    "disableLogging": false,
+    "container": {
+      "port": 3000,
+      "node": 14
+    }
+  }
+  
