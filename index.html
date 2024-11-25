@@ -1,0 +1,97 @@
+<!doctype html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Region Coverage Viewer</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.ts"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="sidebar">
+        <div id="title">Region Coverage Viewer</div>
+        <div id="country-menu-div">
+          <!-- Country selection dropdown -->
+          <select id="country-select" class="pac-controls"></select>
+        </div>
+        <div id="feature-menu-div">
+          <!-- Feature type dropdown -->
+          <select id="feature-type-select" class="pac-controls">
+            <option id="country" value="country">Country</option>
+            <option
+              id="administrative_area_level_1"
+              value="administrative_area_level_1"
+              selected
+            >
+              Administrative Area Level 1
+            </option>
+            <option
+              id="administrative_area_level_2"
+              value="administrative_area_level_2"
+            >
+              Administrative Area Level 2
+            </option>
+            <option id="locality" value="locality">Locality</option>
+            <option id="postal_code" value="postal_code">Postal code</option>
+            <option id="school_district" value="school_district">
+              School district
+            </option>
+          </select>
+        </div>
+        <!-- Autocomplete control -->
+        <div id="ac-input">
+          <input
+            id="pac-input"
+            class="pac-controls"
+            type="text"
+            placeholder="Enter a location name"
+          />
+        </div>
+        <div id="filter-checkbox">
+          <label for="pac-filter-option"
+            ><input id="pac-filter-option" type="checkbox" /> Restrict search to
+            selected feature type</label
+          >
+        </div>
+        <!-- Color controls -->
+        <div id="color-controls" class="pac-controls">
+          <label for="head"
+            >Fill:&nbsp;<input
+              type="color"
+              id="fill-color-picker"
+              name="head"
+              value="#810FCB"
+          /></label>
+          &nbsp;&nbsp;
+          <label for="body"
+            >Stroke:&nbsp;<input
+              type="color"
+              id="stroke-color-picker"
+              name="body"
+              value="#810FCB"
+          /></label>
+        </div>
+        <!-- Place details, photo, etc. -->
+        <div id="pac-content"></div>
+      </div>
+      <div id="map"></div>
+    </div>
+
+    <!-- 
+      The `defer` attribute causes the script to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises. See
+      https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>

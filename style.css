@@ -1,0 +1,83 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/*@include meta.load-css("../../shared/scss/sidebar.scss");*/
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#map {
+  height: 100%;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  font-family: Roboto;
+  font-size: 14px;
+  height: 100%;
+}
+
+#sidebar {
+  background-color: #fff;
+  margin: 1rem;
+  padding: 5px;
+  flex-basis: 15rem;
+  flex-grow: 1;
+  /* max-width: 30rem; */
+  box-sizing: border-box;
+  overflow: auto;
+  display: table;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+#pac-input {
+  background-color: #fff;
+  text-overflow: ellipsis;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-controls {
+  margin-top: 10px;
+  width: -webkit-fill-available;
+}
+
+#pac-content {
+  margin-top: 10px;
+}
+
+#place-info {
+  font-size: 14px;
+}
+
+#color-controls {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
