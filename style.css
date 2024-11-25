@@ -1,0 +1,80 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  height: 100%;
+  display: flex;
+}
+
+#sidebar {
+  flex-basis: 5rem;
+  flex-grow: 1;
+  padding: 1rem;
+  max-width: 30rem;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+#map {
+  flex-basis: 0;
+  flex-grow: 4;
+  height: 100%;
+}
+
+:root {
+  --mdc-theme-primary: #1a73e8;
+  --mdc-theme-secondary: #rgb(225, 245, 254);
+  --mdc-theme-on-primary: #fff;
+  --mdc-theme-on-secondary: rgb(1, 87, 155);
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--mdc-theme-primary);
+}
+
+#sidebar {
+  flex-basis: 5rem;
+  flex-direction: column;
+}
+
+#search,
+.mdc-card {
+  margin-bottom: 1rem;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+}
+#search .mdc-icon-button,
+#search .mdc-text-field {
+  margin: 0 0.1rem 0 0;
+}
+#search .mdc-icon-button {
+  color: var(--mdc-theme-primary);
+}
+#search .mdc-text-field {
+  flex-grow: 1;
+}
+
+#cards {
+  height: calc(100% - 56px);
+  overflow: scroll;
+}
+
+#card-body,
+#card-header {
+  padding: 0 1rem;
+}
+
