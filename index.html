@@ -1,0 +1,78 @@
+<!doctype html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Advanced Marker Collision Management</title>
+
+    <link
+      href="https://unpkg.com/material-components-web@6.0.0/dist/material-components-web.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@6.0.0/dist/material-components-web.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.ts"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="map"></div>
+      <div id="sidebar">
+        <div class="mdc-select mdc-select--outlined">
+          <div
+            class="mdc-select__anchor"
+            aria-labelledby="outlined-select-label"
+          >
+            <input
+              type="text"
+              disabled
+              readonly
+              id="demo-selected-text"
+              class="mdc-select__selected-text"
+            />
+            <i class="mdc-select__dropdown-icon"></i>
+            <span class="mdc-notched-outline">
+              <span class="mdc-notched-outline__leading"></span>
+              <span class="mdc-notched-outline__notch">
+                <span
+                  id="outlined-select-label"
+                  class="mdc-floating-label mdc-theme--primary"
+                  >Pick a Collision Behavior</span
+                >
+              </span>
+              <span class="mdc-notched-outline__trailing"></span>
+            </span>
+          </div>
+          <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+            <ul class="mdc-list">
+              <li class="mdc-list-item" data-value="REQUIRED">Required</li>
+              <li
+                class="mdc-list-item"
+                data-value="REQUIRED_AND_HIDES_OPTIONAL"
+              >
+                Required and hides optional
+              </li>
+              <li
+                class="mdc-list-item"
+                data-value="OPTIONAL_AND_HIDES_LOWER_PRIORITY"
+              >
+                Optional and hides lower priority
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- prettier-ignore -->
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
+  </body>
+</html>
