@@ -1,0 +1,159 @@
+<!doctype html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Places Autocomplete Service</title>
+
+    <link
+      href="https://unpkg.com/material-components-web@7.0.0/dist/material-components-web.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@7.0.0/dist/material-components-web.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.ts"></script>
+  </head>
+  <body>
+    <div id="container" class="mdc-typography">
+      <div id="map"></div>
+      <div id="service">
+        <div id="inputs">
+          <div class="row">
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <input
+                class="mdc-text-field__input"
+                type="text"
+                id="input"
+                autocomplete="off"
+                aria-labelledby="input-label"
+              />
+              <span class="mdc-floating-label" id="input-label"
+                >Autocomplete Input</span
+              >
+              <span class="mdc-line-ripple"></span>
+            </label>
+          </div>
+          <div class="row">
+            <label for="bias-to-map">Bias to map bounds</label>
+            <div class="mdc-switch">
+              <div class="mdc-switch__track"></div>
+              <div class="mdc-switch__thumb-underlay">
+                <div class="mdc-switch__thumb"></div>
+                <input
+                  type="checkbox"
+                  id="bias-to-map"
+                  class="mdc-switch__native-control"
+                  role="switch"
+                  aria-checked="false"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="mdc-select mdc-select--filled">
+              <div class="mdc-select__anchor">
+                <span class="mdc-select__ripple"></span>
+                <span class="mdc-select__selected-text"></span>
+                <span class="mdc-select__dropdown-icon">
+                  <svg
+                    class="mdc-select__dropdown-icon-graphic"
+                    viewBox="7 10 10 5"
+                  >
+                    <polygon
+                      class="mdc-select__dropdown-icon-inactive"
+                      stroke="none"
+                      fill-rule="evenodd"
+                      points="7 10 12 15 17 10"
+                    ></polygon>
+                    <polygon
+                      class="mdc-select__dropdown-icon-active"
+                      stroke="none"
+                      fill-rule="evenodd"
+                      points="7 15 12 10 17 15"
+                    ></polygon>
+                  </svg>
+                </span>
+                <span class="mdc-floating-label">Autocomplete Type</span>
+                <span class="mdc-line-ripple"></span>
+              </div>
+              <div
+                class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth"
+              >
+                <ul class="mdc-list" id="autocomplete-type-list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="results">
+          <div class="mdc-tab-bar" role="tablist">
+            <div class="mdc-tab-scroller">
+              <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                  <button
+                    class="mdc-tab mdc-tab--active"
+                    role="tab"
+                    aria-selected="true"
+                    tabindex="0"
+                  >
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Request</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                      <span
+                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                      ></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+                  <button
+                    class="mdc-tab mdc-tab"
+                    role="tab"
+                    aria-selected="true"
+                    tabindex="0"
+                  >
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Response</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator">
+                      <span
+                        class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                      ></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-content--active">
+            <pre><code id="request"></code></pre>
+          </div>
+          <div class="tab-content">
+            <pre><code id="response"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      The `defer` attribute causes the script to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises. See
+      https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initialize&libraries=places&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
