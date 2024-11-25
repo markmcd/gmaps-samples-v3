@@ -1,0 +1,29 @@
+<!doctype html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Programmatically Load Google Maps JS</title>
+
+    <!-- Use Material Design Button CSS-->
+    <link
+      href="https://unpkg.com/material-components-web@6.0.0/dist/material-components-web.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.ts"></script>
+  </head>
+  <body>
+    <div id="map">
+      <div id="wrapper">
+        <button id="load_map_button" class="mdc-button mdc-button--raised">
+          Load Dynamic Map
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
