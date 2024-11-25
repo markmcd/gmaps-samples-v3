@@ -1,0 +1,49 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#map {
+  height: 100%;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#goCenterUI,
+#setCenterUI {
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  float: left;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+#goCenterText,
+#setCenterText {
+  color: rgb(25, 25, 25);
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#setCenterUI {
+  margin-left: 12px;
+}
+
