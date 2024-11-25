@@ -1,0 +1,85 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+html,
+body,
+#map {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nicebox {
+  position: absolute;
+  text-align: center;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 13px;
+  z-index: 5;
+  box-shadow: 0 4px 6px -4px #333;
+  padding: 5px 10px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(245, 245, 245) 100%);
+  border: rgb(229, 229, 229) 1px solid;
+}
+
+#controls {
+  top: 10px;
+  left: 110px;
+  width: 360px;
+  height: 45px;
+}
+
+#data-box {
+  top: 10px;
+  left: 500px;
+  height: 45px;
+  line-height: 45px;
+  display: none;
+}
+
+#census-variable {
+  width: 360px;
+  height: 20px;
+}
+
+#legend {
+  display: flex;
+  display: -webkit-box;
+  padding-top: 7px;
+}
+
+.color-key {
+  background: linear-gradient(to right, hsl(5, 69%, 54%) 0%, hsl(29, 71%, 51%) 17%, hsl(54, 74%, 47%) 33%, hsl(78, 76%, 44%) 50%, hsl(102, 78%, 41%) 67%, hsl(127, 81%, 37%) 83%, hsl(151, 83%, 34%) 100%);
+  flex: 1;
+  -webkit-box-flex: 1;
+  margin: 0 5px;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+#data-value {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#data-label {
+  font-size: 2em;
+  font-weight: normal;
+  padding-right: 10px;
+}
+
+#data-label:after {
+  content: ":";
+}
+
+#data-caret {
+  margin-left: -5px;
+  display: none;
+  font-size: 14px;
+  width: 14px;
+}
+

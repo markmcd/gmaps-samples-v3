@@ -1,0 +1,69 @@
+<!doctype html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Mashups with google.maps.Data</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.ts"></script>
+  </head>
+  <body>
+    <div id="controls" class="nicebox">
+      <div>
+        <select id="census-variable">
+          <option
+            value="https://storage.googleapis.com/mapsdevsite/json/DP02_0066PE"
+          >
+            Percent of population over 25 that completed high school
+          </option>
+          <option
+            value="https://storage.googleapis.com/mapsdevsite/json/DP05_0017E"
+          >
+            Median age
+          </option>
+          <option
+            value="https://storage.googleapis.com/mapsdevsite/json/DP05_0001E"
+          >
+            Total population
+          </option>
+          <option
+            value="https://storage.googleapis.com/mapsdevsite/json/DP02_0016E"
+          >
+            Average family size
+          </option>
+          <option
+            value="https://storage.googleapis.com/mapsdevsite/json/DP03_0088E"
+          >
+            Per-capita income
+          </option>
+        </select>
+      </div>
+      <div id="legend">
+        <div id="census-min">min</div>
+        <div class="color-key"><span id="data-caret">&#x25c6;</span></div>
+        <div id="census-max">max</div>
+      </div>
+    </div>
+    <div id="data-box" class="nicebox">
+      <label id="data-label" for="data-value"></label>
+      <span id="data-value"></span>
+    </div>
+    <div id="map"></div>
+
+    <!-- 
+      The `defer` attribute causes the script to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises. See
+      https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
