@@ -1,0 +1,64 @@
+<!doctype html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Directions Service (Complex)</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.ts"></script>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <b>Start: </b>
+      <select id="start">
+        <option value="penn station, new york, ny">Penn Station</option>
+        <option value="grand central station, new york, ny">
+          Grand Central Station
+        </option>
+        <option value="625 8th Avenue, New York, NY, 10018">
+          Port Authority Bus Terminal
+        </option>
+        <option value="staten island ferry terminal, new york, ny">
+          Staten Island Ferry Terminal
+        </option>
+        <option value="101 E 125th Street, New York, NY">
+          Harlem - 125th St Station
+        </option>
+      </select>
+      <b>End: </b>
+      <select id="end">
+        <option value="260 Broadway New York NY 10007">City Hall</option>
+        <option value="W 49th St & 5th Ave, New York, NY 10020">
+          Rockefeller Center
+        </option>
+        <option value="moma, New York, NY">MOMA</option>
+        <option value="350 5th Ave, New York, NY, 10118">
+          Empire State Building
+        </option>
+        <option value="253 West 125th Street, New York, NY">
+          Apollo Theater
+        </option>
+        <option value="1 Wall St, New York, NY">Wall St</option>
+      </select>
+    </div>
+    <div id="map"></div>
+    &nbsp;
+    <div id="warnings-panel"></div>
+
+    <!-- 
+      The `defer` attribute causes the script to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises. See
+      https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
