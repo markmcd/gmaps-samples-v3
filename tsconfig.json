@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
+    "module": "es2020",
+    "target": "es2020",
     "strict": true,
     "noImplicitAny": false,
-    "lib": ["esnext", "es6", "dom", "dom.iterable"],
+    "lib": ["es2020", "es6", "dom", "dom.iterable"],
     "moduleResolution": "Bundler",
     "jsx": "preserve",
     "esModuleInterop": true,

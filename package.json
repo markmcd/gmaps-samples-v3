@@ -46,7 +46,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@googlemaps/three": "^4.0.13",
     "@playwright/test": "^1.44.0",
-    "@types/geojson": "^7946.0.14",
+    "@types/geojson": "^7946.0.13",
     "@types/google.maps": "^3.53.5",
     "@types/google.visualization": "0.0.73",
     "@types/jest": "^29.5.6",
