@@ -1,7 +1,6 @@
 {
   "title": "Tilt and Rotation",
-  "callback": "initMap",
-  "libraries": [],
+  "dynamic_import": "true",
   "version": "weekly",
   "tag": "webgl_tilt_rotation",
   "name": "webgl-tilt-rotation",

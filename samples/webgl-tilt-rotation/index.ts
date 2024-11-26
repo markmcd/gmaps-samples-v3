@@ -5,18 +5,20 @@
  */
 
 // [START maps_webgl_tilt_rotation]
-function initMap(): void {
-  const map = new google.maps.Map(
+async function initMap() {
+  const { LatLng } = await google.maps.importLibrary("core") as google.maps.CoreLibrary;
+  const { Map, RenderingType } = await google.maps.importLibrary("maps") as google.maps.MapsLibrary;
+
+  const center = new LatLng(37.790211, -122.389607); // Downtown San Francisco, CA
+
+  const map = new Map(
     document.getElementById("map") as HTMLElement,
     {
-      center: {
-        lat: 37.7893719,
-        lng: -122.3942,
-      },
-      zoom: 16,
-      heading: 320,
-      tilt: 47.5,
-      mapId: "90f87356969d889c",
+      center,
+      zoom: 17,
+      heading: 280,
+      tilt: 67.5,
+      renderingType: RenderingType.VECTOR,
     }
   );
 
@@ -52,13 +54,9 @@ function initMap(): void {
         break;
     }
   };
+  
 }
 
-declare global {
-  interface Window {
-    initMap: () => void;
-  }
-}
-window.initMap = initMap;
+initMap();
 // [END maps_webgl_tilt_rotation]
 export {};
