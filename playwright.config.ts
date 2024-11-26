@@ -1,4 +1,4 @@
-import { PlaywrightTestConfig, devices } from "@playwright/test";
+import { type PlaywrightTestConfig, devices } from "@playwright/test";
 import { test, expect, Expect } from "@playwright/test";
 import fs from "fs";
 import path from "path";

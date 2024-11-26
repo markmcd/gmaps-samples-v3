@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
+    "module": "ES2022",
+    "target": "ES2022",
     "strict": true,
     "noImplicitAny": false,
-    "lib": ["esnext", "es6", "dom", "dom.iterable"],
+    "lib": ["ES2022", "es6", "dom", "dom.iterable"],
     "moduleResolution": "Bundler",
     "jsx": "preserve",
     "esModuleInterop": true,

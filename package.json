@@ -2,6 +2,7 @@
   "name": "@googlemaps/js-samples",
   "description": "Samples for Google Maps JavaScript",
   "version": "2.1.4",
+  "type": "module",
   "keywords": [
     "google",
     "javascript",

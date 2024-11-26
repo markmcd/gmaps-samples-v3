@@ -1,21 +1,36 @@
 require("dotenv").config();
 
-const typescript = require("./src/engines/typescript/sample");
-const typescriptJSX = require("./src/engines/typescript/sample-jsx");
-const sass = require("./src/engines/sass");
-const stripRegionTags = require("./src/transforms/strip-region-tags");
-const stripLicenseHeaders = require("./src/transforms/strip-license-headers");
-const yourAPIKey = require("./src/transforms/your-api-key");
-const format = require("./src/transforms/format");
-const minify = require("./src/transforms/minify");
-const skypack = require("./src/transforms/skypack");
-const fs = require("fs");
-const path = require("path");
-const vite = require("vite");
-const chalk = require("chalk");
-const prettier = require("prettier");
+// const typescript = require("./src/engines/typescript/sample");
+// const typescriptJSX = require("./src/engines/typescript/sample-jsx");
+// const sass = require("./src/engines/sass");
+// const stripRegionTags = require("./src/transforms/strip-region-tags");
+// const stripLicenseHeaders = require("./src/transforms/strip-license-headers");
+// const yourAPIKey = require("./src/transforms/your-api-key");
+// const format = require("./src/transforms/format");
+// const minify = require("./src/transforms/minify");
+// const skypack = require("./src/transforms/skypack");
+// const fs = require("fs");
+// const path = require("path");
+// const vite = require("vite");
+// const chalk = require("chalk");
+// const prettier = require("prettier");
 
-module.exports = function (eleventyConfig) {
+const { typescript } = await ".src/engines/typescript/sample";
+const { typescriptJSX } = await "./src/engines/typescript/sample-jsx";
+const { sass } = await "./src/engines/sass";
+const { stripRegionTags } = await "./src/transforms/strip-region-tags";
+const { stripLicenseHeaders } = await "./src/transforms/strip-license-headers";
+const { yourAPIKey } = await "./src/transforms/your-api-key";
+const { format } = await "./src/transforms/format";
+const { minify } = await "./src/transforms/minify";
+const { skypack } = await "./src/transforms/skypack";
+const { fs } = await "fs";
+const { path } = await "path";
+const { vite } = await "vite";
+const { chalk } = await "chalk";
+const { prettier } = await "prettier";
+
+export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./shared/**/*");
   eleventyConfig.addWatchTarget(".env*");
 
