@@ -1,0 +1,13 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+ @use 'sass:meta'; // To enable @use via meta.load-css and keep comments in order
+
+ /* [START maps_3d_map_simple] */
+ @include meta.load-css("../../shared/scss/default.scss");
+ 
+ /* [END maps_3d_map_simple] */
+ 

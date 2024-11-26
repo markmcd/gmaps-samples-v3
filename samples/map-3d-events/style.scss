@@ -1,0 +1,38 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@use "sass:meta"; // To enable @use via meta.load-css and keep comments in order
+
+/* [START maps_map_3d_events] */
+@include meta.load-css("../../shared/scss/sidebar.scss");
+
+body, main {
+  display: flex;
+}
+main {
+  padding: 30px;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+}
+gmp-map-3d {
+  flex-basis: 75%;
+  height: 100%;
+}
+aside {
+  flex-basis: 25%;
+  font-family: Droid Sans Mono, monospace;
+  font-size: 14px;
+  padding-left: 10px;
+}
+aside > p.active {
+  background-color: #9cf;
+}
+/* [END maps_map_3d_events] */

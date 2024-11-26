@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+{% extends '../../src/_includes/layout.njk'%} {% block html %}
+<gmp-map-3d center="37.7704, -122.3985, 460" range="300" tilt="700"></gmp-map-3d>
+<aside>
+  <p id="gmp-centerchange">gmp-centerchange</p>
+  <p id="gmp-click">gmp-click</p>
+  <p id="gmp-headingchange">gmp-headingchange</p>
+  <p id="gmp-rangechange">gmp-rangechange</p>
+  <p id="gmp-rollchange">gmp-rollchange</p>
+  <p id="gmp-steadychange">gmp-steadychange</p>
+  <p id="gmp-tiltchange">gmp-tiltchange</p>
+</aside>
+{% endblock %}

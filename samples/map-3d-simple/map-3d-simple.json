@@ -1,0 +1,17 @@
+{
+    "title": "Map 3D Simple Example",
+    "libraries": [
+      "maps3d"
+    ],
+    "callback": "initMap",
+    "version": "alpha",
+    "tag": "map_3d_simple",
+    "name": "map-3d-simple",
+    "pagination": {
+      "data": "mode",
+      "size": 1,
+      "alias": "mode"
+    },
+    "permalink": "samples/{{ page.fileSlug }}/{{mode}}/{% if mode == 'jsfiddle' %}demo{% else %}index{% endif %}.{{ page.outputFileExtension }}"
+  }
+  
