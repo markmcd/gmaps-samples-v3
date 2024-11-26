@@ -58,7 +58,7 @@
 
     // Create 100 markers to animate.
     google.maps.event.addListenerOnce(map, 'idle', () => {
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < total; i++) {
         createMarker(map, AdvancedMarkerElement);
       }
     });
