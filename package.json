@@ -96,7 +96,7 @@
     "@tweenjs/tween.js": "^21.0.0",
     "@vis.gl/react-google-maps": "^1.0.0",
     "clsx": "^2.1.1",
-    "fast-equals": "^3.0.3",
+    "fast-equals": "^5.2.0",
     "playground-elements": "^0.18.1",
     "react": "^18.2.0",
     "react-dom": "^18.3.1",
